@@ -33,24 +33,25 @@ function DonutDetails() {
     return(
       <div className='dtailBody'>
         <div className='donutDetail'>
-          <div id='tailName'>Donut:</div>
-          <div id='tailDescr'>Donut Description:</div>
-          <div id='tailJolt'>Donut Jolt:</div>
-          <div id='tailPrice'>Donut Price:</div>
-          <div id='tailRate'>Donut Rating:</div>
-          <div id='Feat'>Donut Feature:</div>
-          <div id='tailQuant'>Donut Quantity:</div>
-          <div id='tailImg'><img src={ donut.image } /></div>
-          <div id='tailResp'>Donut Responsibility:</div>
+          <div id='tailName'> {donut.name}</div>
+          <div id='tailDescr'>{donut.description}</div>
+          <div id='tailJolt'>Jolt: Single or Double / {donut.jolt} or 2</div>
+          <div id='tailPrice'>Price: $ {donut.price}</div>
+          <div id='tailRate'>Rating: {donut.rating}</div>
+          <div id='tailFeat'>Donut Featured: {donut.featured}</div>
+          {/* <div id='tailQuant'>Donut Quantity: {donut.quantity}</div> */}
+          {/* <div id='tailResp'>Donut Responsibility: {donut.responsibility}</div><br /> */}
+          <br /><div id='tailImg'><img style={{'height':'500px'}} src={ donut.image } /></div><br />
+
         </div>
           <div className='detailBtns'>
             <Link to={`/donuts`}>
                <button id='dtBn1'>Back</button>
             </Link>
             <Link to={`/donuts/${id}/edit`}>
-               <button id='dtBn2'>Edit</button>
+               <button id='dtBn2'>Place Order</button>
             </Link>
-               <button id='dtBn3' onClick={handleDelete}>Delete</button>
+               <button id='dtBn3' onClick={handleDelete}>Delete Item</button>
           </div>
       </div>
     );

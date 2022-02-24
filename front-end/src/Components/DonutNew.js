@@ -45,7 +45,7 @@ function DonutNew() {
 
     function handleSubmitChangeIndex() {
         axios
-           .put(`${API_URL}/donuts${id}`, donut)
+           .put(`${API_URL}/donuts/${id}`, donut)
            .then((res) => {
                navigate('/donuts');
            }).catch((error) => {
@@ -56,7 +56,7 @@ function DonutNew() {
     return (
         <div>
             <div className='donutNew'>
-                <h1>Add New Donuts</h1>
+                {/* <h1>Add New Donuts</h1> */}
             </div>
                <div>
                    <form onSubmit={handleSubmit} className='newVals'>
@@ -151,7 +151,7 @@ function DonutNew() {
                                pattern = 'http[s]*://.+'
                                required
                                value = {donut.image}
-                               placeholder = 'image'
+                               placeholder = 'https://'
                                onChange = {handleTextChange}
                                />  
                        </div>
@@ -171,6 +171,7 @@ function DonutNew() {
                        <div className='donutNewBtns'>
 
                            <button onClick={handleSubmitChangeIndex}>Create New Donut</button>
+                           
                            <br/>
                            <Link to = {`/donuts/${id}`}>
                                <button type = 'submit'>Back</button>

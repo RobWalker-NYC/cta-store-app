@@ -48,11 +48,11 @@ function DonutEdit() {
 
   return(
       <div className='donutEdit'>
-          <div>
+          <div><br />
               <form onSubmit={handleEdit}>
                   <br/>
                   <div id='editName'> 
-                      <label htmlFor='name'>Name</label>
+                      <label htmlFor='name'>Name  </label>
                       <input
                           id = 'name'
                            value = {donut.name}
@@ -64,19 +64,19 @@ function DonutEdit() {
                   </div>        
                   <br/> 
                   <div id='editJolt'>
-                        <label htmlFor='jolt'>Jolt</label>
+                        <label htmlFor='jolt'>Jolt </label>
                         <input
                             id = 'jolt'
                             value = {donut.jolt}
                             type = 'boolean'
                             onChange = {handleTextChange}
-                            placeholder = '1'
+                            placeholder = ''
                             required
                             />
                   </div>
                   <br/> 
                   <div id='editRate'>
-                        <label htmlFor='rating'>Rating</label>
+                        <label htmlFor='rating'>Rating </label>
                         <input
                             id = 'rating'
                             value = {donut.rating}
@@ -86,7 +86,7 @@ function DonutEdit() {
                             />
                   </div>
                   <br/> 
-                  <div id='editFeat'>
+                  {/* <div id='editFeat'>
                     <label htmlFor='featured'>Featured</label>
                       <input
                           id = 'featured'
@@ -97,9 +97,9 @@ function DonutEdit() {
                            
                           />
                   </div>
-                  <br/> 
+                  <br/>  */}
                   <div id='editQuan'>
-                    <label htmlFor='quantity'>Quantity</label>
+                    <label htmlFor='quantity'>Quantity </label>
                       <input
                           id = 'quantity'
                            value = {donut.quantity}
@@ -110,7 +110,7 @@ function DonutEdit() {
                           />
                   </div>
                   <br/> 
-                  <div id='editRespons'>
+                  {/* <div id='editRespons'>
                     <label htmlFor='responsibility'>Responsibility</label>
                       <input
                           id = 'responsibility'
@@ -121,10 +121,10 @@ function DonutEdit() {
                            required
                           />
                   </div>  
-                  <br/> 
-                  <div id='editImage'>
-                    <label htmlFor='image'>Image</label>
-                      <input
+                  <br/>  */}
+                  <div id='editImage'><img style={{'height':'500px'}} src={ donut.image } />
+                    {/* <label htmlFor='image'>Image</label> */}
+                      {/* <input
                           id = 'image'
                           type = 'text'
                           pattern = 'http[s]*://.+'
@@ -132,15 +132,18 @@ function DonutEdit() {
                           value = {donut.image}
                           placeholder = 'http://'
                           onChange = {handleTextChange}
-                          />
+                          /> */}
                     </div> 
                     <br/> 
                     <div className='donutEditBtns'>
-                        <button type = 'submit' >Submit Donut</button>
-                        <br/> 
-                        <Link to = {`/donut/${id}`}>
-                            <button type = 'submit'>Back</button>
+                        
+                    <Link to = {`/donuts/${id}`}>
+
+                            <button id='editFtBt1' type = 'submit'>Back</button>
                         </Link>
+                        <button id='editFtBt2'  type = 'submit' >Submit Donut</button>
+                    
+
                     </div>            
               </form>
           </div>

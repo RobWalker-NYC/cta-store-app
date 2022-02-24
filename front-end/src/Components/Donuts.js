@@ -19,28 +19,27 @@ function Donuts() {
     
     return (
        <div>
-           <div>
+           <div className='idDonuts'>
+           {/* <p>{donuts.name}<th id='indexTBody'>{donuts.map((donut, id) => {return ( <Donut key={id} donut={donut} id={id} />);})}</th></p> */}
                <section>
-                   <table>
+                   {/* <table>
                        <thead>
-                           <tr>
-                               <th>Name</th>
+                           <tr> */}
+                               {/* <th>Name</th>
                                <th>Description</th>
                                <th>Jolt</th>
-                               <th>Price</th>
-                               <th>Rating</th>
-                               <th>Featured</th>
-                               <th>Quantity</th>
-                               <th>Image</th>
-                               <th>Responsibility</th>
-                           </tr>
+                               <th>Price</th><br /> */}
+                               {/* <th>Rating</th> */}
+                            {/* <th>Featured</th> */}
+                               {/* <th>Quantity</th> */}
+                               {/* <th>Responsibility</th> */}
+                               {/* <th>Image</th> */}
+                               
+                               <br /><p><th id='indexTBody'>{donuts.map((donut, id) => {return ( <Donut key={id} donut={donut} id={id} />);})}</th></p>
+                              
+                          {/* </tr>
                        </thead>
-                        <tbody>
-                          {donuts.map((donut, id) => {
-                              return ( <Donut key={id} donut={donut} id={id}/> );
-                          })}
-                        </tbody>
-                   </table>
+                   </table> */}
                </section>
            </div>
        </div>
