@@ -3,7 +3,7 @@ import DonutDetails from '../Components/DonutDetails';
 function Show() {
     return(
         <div className='Show'>
-           <h2>Show</h2>
+           <br/><h2>Donut Details </h2>
             <DonutDetails />
         </div>
     );

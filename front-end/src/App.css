@@ -1,0 +1,118 @@
+.navBar{
+    background-color: yellow;
+    padding: 50px;
+}
+
+#title{
+    font-size: 45px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+#hr {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px; 
+  }
+
+  #indexTBody{
+    font-size: 20px; 
+  }
+
+#navApp{
+    color: black;
+
+}
+
+
+#navFoot{
+    font-size: 20px;   
+}
+
+#navMidFt{
+    font-size: 20px;  
+}
+
+.idDonuts{
+  background-color: yellow;
+}
+
+.donutNew{
+    background-color: yellow;
+}
+
+.newVals{
+    background-color: yellow;  
+}
+
+.compDonut{
+    text-align: center;
+}
+
+#dLinkName{
+    text-decoration: none;
+}
+
+.Show{
+    background-color: yellow;
+    padding-left: 25px;
+   
+}
+
+#tailName{
+    color: blue;
+    font-size: 20px;
+}
+
+#tailDescr{
+    font-size: 20px;
+}
+
+#tailJolt{
+    font-size: 20px;
+}
+
+#tailPrice{
+    font-size: 20px;
+}
+
+#tailRate{
+    font-size: 20px;
+}
+
+#tailFeat{
+    font-size: 20px;
+}
+
+#dtBn1{
+    margin-right: 50px;
+}
+
+#dtBn2{
+    margin-right: 50px;
+}
+
+#dtBn3{
+    margin-right: 50px;
+}
+
+.donutEdit{
+    background-color: yellow;
+    padding-left: 25px; 
+}
+
+.donutEditBtns{
+    background-color: yellow; 
+}
+
+#editFtBt1 {
+    margin-right: 50px; 
+}
+
+.Edit{
+    background-color: yellow;  
+}
+
+
+
+
