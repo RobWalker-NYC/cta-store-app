@@ -60,7 +60,7 @@ function DonutEdit() {
                            placeholder= 'name'
                           />
                   <br/> 
-                  <div id='editJolt'>
+                  <br /><div id='editJolt'>
                         <label htmlFor='jolt'>Jolt </label>
                         {/* <input
                             id = 'jolt'
@@ -97,7 +97,7 @@ function DonutEdit() {
                   </div>
                   <br/> 
                   <div id='editFeat'>
-                    <label htmlFor='featured'>Featured</label>
+                    <label htmlFor='featured'>Featured </label>
                       <input
                           id = 'featured'
                            value = {donut.featured}
@@ -133,7 +133,7 @@ function DonutEdit() {
                   </div>  
                   <br/>  */}
                   <div id='editImage'><img style={{'height':'500px'}} src={ donut.image } />
-                    <label htmlFor='image'>Image </label>
+                    <label htmlFor='image'> Image </label>
                       <input
                           id = 'image'
                           type = 'text'

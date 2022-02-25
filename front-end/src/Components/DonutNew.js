@@ -60,7 +60,7 @@ function DonutNew() {
             <div className='donutNew'>
                 {/* <h1>Add New Donuts</h1> */}
             </div>
-               <div>
+               <div >
                    <form onSubmit={handleSubmit} className='newVals'>
                        <div id='newName'>
                            <label htmlFor='name'>Name </label>
@@ -75,7 +75,7 @@ function DonutNew() {
                        </div>
                        <br/>
                        <div id='newDescr'>
-                           <label htmlFor='description'>Description</label><br/>
+                           <label htmlFor='description'>Description </label>
                            <input
                                id= 'description'
                                value= {donut.description}
@@ -140,7 +140,7 @@ function DonutNew() {
                        </div>
                        <br/>
                        <div id='newQuan'>  
-                           <label htmlFor='quantity'>Quantity</label>
+                           <label htmlFor='quantity'>Quantity </label>
                            <input
                                id = 'quantity'
                                value = {donut.quantity}
@@ -185,6 +185,7 @@ function DonutNew() {
                         <Link id='newFtbt2' to = {`/donuts/${id}`}>
                                <button id ='newFtbt2' type = 'submit'>Back</button>
                          </Link>
+                        
                </div>
         </div>
     );

@@ -9,9 +9,9 @@ function Donut({ donut }) {
                     <Link id='hr' to={`/donuts/${donut.id}`}>{donut.name}</Link>
                 </td >
                 {/* <td id='dName'>{donut.name}</td> */}
-                <td id='dDeds'>{donut.description}</td><br />
-                {/* <td id='dJolt'>{donut.jolt}</td> */}
-                <br /><td id='dPric'>{donut.price}</td><br />
+                <td id='dDeds'>{donut.description}</td>
+                {/* <td id='dJolt'>{donut.jolt}</td> */}<br />
+                <br/><td id='dPric'>${donut.price}.00</td><br />
                 {/* <br /><td id='dRate'>{donut.rating}</td><br /> */}
                 {/* <br /><td id='dFeat'>{donut.feature}</td> */}
                 {/* <td id='dQuant'>{donut.quantity}</td> */}

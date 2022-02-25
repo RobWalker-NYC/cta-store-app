@@ -8,23 +8,20 @@ function Donuts() {
     const [donuts, setDonuts] = useState ([]);
        
     useEffect(() => {
-    
         axios
           .get(`${API_URL}/donuts`)
           .then((res) => {
             console.log(res.data)
               setDonuts(res.data.payload);
-            
           }).catch((error) => {
                throw error
           })
     } );
 
-    let Donuts = donuts.map((donut, id) => {
+    let allDonuts = donuts.map((donut, id) => {
           return <Donut key = {id} donut = {donut} />
     });
     
-
 
     let featDonut = donuts.filter(donut => donut.featured)
                           .map((donut) => {
@@ -33,13 +30,15 @@ function Donuts() {
     return (
        <div>
            <div className='idDonuts'>
-               {/* <div>
-                   <label htmlFor='featDonut'></label>
-                   <input id='featured' value='featuredDonuts' tupe='boolean'/>
+               <div className='doFilt'>
+               <div id='fd'>
+                   <label htmlFor='featDonut'>Featured Donuts are listed here </label>
+                   <input id='fNut' value='fNut' type='checkbox'/>
                </div>
                <div id='DonutFilt'>
-                 {featuredDonuts}
-               </div> */}
+                 {featDonut ? featDonut : allDonuts}
+               </div>
+               </div>
                <section>
                    <table>
                        <thead>

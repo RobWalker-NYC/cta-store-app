@@ -34,13 +34,13 @@ function DonutDetails() {
         <div className='donutDetail'>
           <div id='tailName'> {donut.name}</div>
           <div id='tailDescr'>{donut.description}</div>
-          <div id='tailJolt'>Jolt: Single or Double {donut.jolt}</div>
-          <div id='tailPrice'>Price: {donut.price}</div>
+          <div id='tailJolt'>Jolt: Single or Double / {donut.jolt} or 2</div>
+          <div id='tailPrice'>Price: $ {donut.price}.00</div>
           <div id='tailRate'>Rating: {donut.rating}</div>
           <div id='tailFeat'>Donut Featured:  { donut.featured ? 'Yes' : 'No'}</div>
           {/* <div id='tailQuant'>Donut Quantity: {donut.quantity}</div> */}
           {/* <div id='tailResp'>Donut Responsibility: {donut.responsibility}</div><br /> */}
-          <div id='tailImg'><img style={{'height':'500px'}} src={ donut.image } /></div><br />
+          <br /><div id='tailImg'><img style={{'height':'500px'}} src={ donut.image } /></div><br />
 
         </div>
           <div className='detailBtns'>

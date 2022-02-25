@@ -39,10 +39,26 @@
 
 .donutNew{
     background-color: yellow;
+    padding-left: 25px;
+    
 }
 
 .newVals{
-    background-color: yellow;  
+    background-color: yellow; 
+    padding-left: 25px;
+
+}
+
+#newFtbt1{
+    /* background-color: yellow; */
+    margin-bottom: 15px;
+}
+
+#newFtbt2{
+    background-color: yellow;
+    padding-left: 25px;
+    
+    
 }
 
 .compDonut{
@@ -86,10 +102,12 @@
 
 #dtBn1{
     margin-right: 50px;
+    
 }
 
 #dtBn2{
     margin-right: 50px;
+   
 }
 
 #dtBn3{
@@ -119,6 +137,10 @@
 
 #newFtbt1{
     margin-right: 50px; 
+}
+
+#fd{
+    padding-left: 25px;   
 }
 
 
