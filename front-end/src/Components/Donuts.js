@@ -8,38 +8,61 @@ function Donuts() {
     const [donuts, setDonuts] = useState ([]);
        
     useEffect(() => {
+    
         axios
           .get(`${API_URL}/donuts`)
           .then((res) => {
+            console.log(res.data)
               setDonuts(res.data.payload);
+            
           }).catch((error) => {
                throw error
           })
-    }, [API_URL]);
+    } );
+
+    let Donuts = donuts.map((donut, id) => {
+          return <Donut key = {id} donut = {donut} />
+    });
     
+
+
+    let featDonut = donuts.filter(donut => donut.featured)
+                          .map((donut) => {
+                              return <Donut key = {donut.id} donut = {donut} />
+                          })
     return (
        <div>
            <div className='idDonuts'>
-           {/* <p>{donuts.name}<th id='indexTBody'>{donuts.map((donut, id) => {return ( <Donut key={id} donut={donut} id={id} />);})}</th></p> */}
+               {/* <div>
+                   <label htmlFor='featDonut'></label>
+                   <input id='featured' value='featuredDonuts' tupe='boolean'/>
+               </div>
+               <div id='DonutFilt'>
+                 {featuredDonuts}
+               </div> */}
                <section>
-                   {/* <table>
+                   <table>
                        <thead>
-                           <tr> */}
-                               {/* <th>Name</th>
-                               <th>Description</th>
-                               <th>Jolt</th>
-                               <th>Price</th><br /> */}
+                           <tr>
+                               {/* <th>Name</th> */}
+                               {/* <th>Description</th> */}
+                               {/* <th>Jolt</th> */}
+                               {/* <th>Price</th><br /> */}
                                {/* <th>Rating</th> */}
-                            {/* <th>Featured</th> */}
+                               {/* <th>Featured</th> */}
                                {/* <th>Quantity</th> */}
                                {/* <th>Responsibility</th> */}
                                {/* <th>Image</th> */}
                                
-                               <br /><p><th id='indexTBody'>{donuts.map((donut, id) => {return ( <Donut key={id} donut={donut} id={id} />);})}</th></p>
+                               <th id='indexTBody'>{donuts.map((donut, id) => {
+                                   return ( <Donut key={id} donut={donut} id={id} 
+                                   />)
+                                })}
+                                   </th>
                               
-                          {/* </tr>
+                          </tr>
                        </thead>
-                   </table> */}
+                   </table>
                </section>
            </div>
        </div>

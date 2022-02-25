@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 
+
 const API_URL = process.env.REACT_APP_API_URL;
 
 function DonutNew() {
@@ -34,26 +35,27 @@ function DonutNew() {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        // console.log('Hello')
         axios
            .post(`${API_URL}/donuts`, donut)
            .then((res) => {
                navigate(`/donuts`)
          }).catch((error) => {
-              console.log(error);
-          })
+              console.log(error)    
+          }) 
     };
 
-    function handleSubmitChangeIndex() {
-        axios
-           .put(`${API_URL}/donuts/${id}`, donut)
-           .then((res) => {
-               navigate('/donuts');
-           }).catch((error) => {
-                console.log(error);
-           })     
-    };
+    // function handleSubmitChangeIndex() {
+    //     axios
+    //        .put(`${API_URL}/donuts/${id}`, donut)
+    //        .then((res) => {
+    //            navigate('/donuts');
+    //        }).catch((error) => {
+    //             console.log(error);
+    //        })     
+    // };
 
-    return (
+    return (  
         <div>
             <div className='donutNew'>
                 {/* <h1>Add New Donuts</h1> */}
@@ -61,7 +63,7 @@ function DonutNew() {
                <div>
                    <form onSubmit={handleSubmit} className='newVals'>
                        <div id='newName'>
-                           <label htmlFor='name'>Name</label>
+                           <label htmlFor='name'>Name </label>
                            <input
                                id = 'name'
                                value = {donut.name}
@@ -75,64 +77,70 @@ function DonutNew() {
                        <div id='newDescr'>
                            <label htmlFor='description'>Description</label><br/>
                            <input
-                               id = ' description'
-                               value = {donut. description}
-                               type = 'text'
-                               onChange = {handleTextChange}
-                               placeholder = 'description'
-                               required
+                               id= 'description'
+                               value= {donut.description}
+                               type= 'text'
+                               onChange= {handleTextChange}
+                               placeholder= 'description'
+                               
                                />
                        </div>
                        <br/>
                        <div id='newJolt'>  
-                           <label htmlFor='jolt'>Jolt</label><br/>
-                           <input
-                               id = 'jolt'
-                               value = {donut.jolt}
-                               type = 'number'
-                               onChange = {handleTextChange}
-                               placeholder = 'jolt'
-                               required
-                               />  
+                           <label htmlFor='jolt'>Jolt </label>                           
+                            <select>
+                               <option value = '1'>1</option>
+                               <option value = '2'>2</option>
+                            </select>
                        </div>
                        <br/>
                        <div id='newPrice'>
-                           <label htmlFor='price'>Price</label><br/>
+                           <label htmlFor='price'>Price </label>
                            <input
                                id = 'price'
                                value = {donut.price}
                                type = 'number'
                                onChange = {handleTextChange}
                                placeholder = 'price'
-                               required
+                               
                                />
                        </div>
+                       <br />
                        <div id='newRate'>  
-                           <label htmlFor='rating'>Rating</label><br/>
-                           <input
+                           <label htmlFor='rating'>Rating </label>
+                           {/* <input
                                id = 'rating'
                                value = {donut.rating}
                                type = 'number'
                                onChange = {handleTextChange}
                                placeholder = 'rating'
-                               required
-                               />  
+                               
+                               />   */}
+
+                            <select>
+                               <option value = '1'>1</option>
+                               <option value = '2'>2</option>
+                               <option value = '3'>3</option>
+                               <option value = '4'>4</option>
+                               <option value = '5'>5</option>
+
+                            </select>
                        </div>
                        <br/>
                        <div id='newFeat'>  
-                           <label htmlFor='featured'>Featured</label><br/>
+                           <label htmlFor='featured'>Featured </label>
                            <input
                                id = 'featured'
                                value = {donut.featured}
                                type = 'boolean'
                                onChange = {handleFeaturedChange}
                                placeholder = 'featured'
-                               required
+                               
                             />
                        </div>
                        <br/>
                        <div id='newQuan'>  
-                           <label htmlFor='quantity'>Quantity</label><br/>
+                           <label htmlFor='quantity'>Quantity</label>
                            <input
                                id = 'quantity'
                                value = {donut.quantity}
@@ -144,7 +152,7 @@ function DonutNew() {
                        </div>
                        <br/>
                        <div id='newImage'>  
-                           <label htmlFor='image'>Image</label><br/>
+                           <label htmlFor='image'>Image </label>
                            <input
                                id = 'image'
                                type = 'text'
@@ -157,27 +165,26 @@ function DonutNew() {
                        </div>
                        <br/>
                        <div id='newRespons'>  
-                           <label htmlFor='responsibility'>Responsibility</label><br/>
+                           <label htmlFor='responsibility'>Responsibility </label>
                            <input
                                id = 'responsibility'
                                value = {donut.responsibility}
                                type = 'boolean'
                                onChange = {handleResponsibilityChange}
-                               placeholder = 'responsibility'
-                               required
+                            //    placeholder = 'responsibility'
+                               
                                />  
                        </div>
                        <br/>
                        <div className='donutNewBtns'>
+ .                      </div>
+                           <input id='newFtbt1' type="submit" value='Create Donut' />
 
-                           <button onClick={handleSubmitChangeIndex}>Create New Donut</button>
-                           
-                           <br/>
-                           <Link to = {`/donuts/${id}`}>
-                               <button type = 'submit'>Back</button>
-                           </Link>
-                       </div>
+        
                     </form>
+                        <Link id='newFtbt2' to = {`/donuts/${id}`}>
+                               <button id ='newFtbt2' type = 'submit'>Back</button>
+                         </Link>
                </div>
         </div>
     );

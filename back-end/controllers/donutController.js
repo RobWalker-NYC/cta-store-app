@@ -50,17 +50,17 @@ donuts.post('/', async (req, res) => {
         if(!createdDonut.image){
             createdDonut.image = "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image"
         }
-        if(createdDonut.id) {
+        // if(createdDonut.id) {
             res.status(200).json({
                 sucess: true,
                 payload: createdDonut
             });
-        } else {
-            res.status(404).json({
-                sucess: false,
-                payload: 'Donut cannot be found'
-            });
-        }
+        // } else {
+        //     res.status(404).json({
+        //         sucess: false,
+        //         payload: 'Donut cannot be found'
+        //     });
+        // }
     } catch(error){
         console.log(error);
     }

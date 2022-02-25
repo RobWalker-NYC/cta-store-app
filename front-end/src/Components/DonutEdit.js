@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 
+
 const API_URL = process.env.REACT_APP_API_URL;
 
 function DonutEdit() {
@@ -36,7 +37,6 @@ function DonutEdit() {
 
     const handleEdit = (event) => {
         event.preventDefault()
-
         axios
            .put(`${API_URL}/donuts/${id}`, donut)
            .then((res) => {
@@ -51,42 +51,52 @@ function DonutEdit() {
           <div><br />
               <form onSubmit={handleEdit}>
                   <br/>
-                  <div id='editName'> 
-                      <label htmlFor='name'>Name  </label>
+                      <label id='editName' htmlFor='name'>Name  </label>
                       <input
-                          id = 'name'
-                           value = {donut.name}
-                           type = 'text'
-                           onChange = {handleTextChange}
-                           placeholder = 'name'
-                           
+                          id= 'name'
+                           value= {donut.name}
+                           type= 'text'
+                           onChange= {handleTextChange}
+                           placeholder= 'name'
                           />
-                  </div>        
                   <br/> 
                   <div id='editJolt'>
                         <label htmlFor='jolt'>Jolt </label>
-                        <input
+                        {/* <input
                             id = 'jolt'
                             value = {donut.jolt}
-                            type = 'boolean'
+                            type = ''
                             onChange = {handleTextChange}
                             placeholder = ''
                             required
-                            />
+                            /> */}
+                            <select>
+                               <option value = '1'>1</option>
+                               <option value = '2'>2</option>
+                            </select>
                   </div>
                   <br/> 
                   <div id='editRate'>
                         <label htmlFor='rating'>Rating </label>
-                        <input
+                        {/* <input
                             id = 'rating'
                             value = {donut.rating}
                             type = 'number'
                             onChange = {handleTextChange}
                             placeholder = '4'   
-                            />
+                            /> */}
+                          <select>
+                               <option value = '1'>1</option>
+                               <option value = '2'>2</option>
+                               <option value = '3'>3</option>
+                               <option value = '4'>4</option>
+                               <option value = '5'>5</option>
+
+                            </select>
+
                   </div>
                   <br/> 
-                  {/* <div id='editFeat'>
+                  <div id='editFeat'>
                     <label htmlFor='featured'>Featured</label>
                       <input
                           id = 'featured'
@@ -97,7 +107,7 @@ function DonutEdit() {
                            
                           />
                   </div>
-                  <br/>  */}
+                  <br/> 
                   <div id='editQuan'>
                     <label htmlFor='quantity'>Quantity </label>
                       <input
@@ -123,8 +133,8 @@ function DonutEdit() {
                   </div>  
                   <br/>  */}
                   <div id='editImage'><img style={{'height':'500px'}} src={ donut.image } />
-                    {/* <label htmlFor='image'>Image</label> */}
-                      {/* <input
+                    <label htmlFor='image'>Image </label>
+                      <input
                           id = 'image'
                           type = 'text'
                           pattern = 'http[s]*://.+'
@@ -132,16 +142,15 @@ function DonutEdit() {
                           value = {donut.image}
                           placeholder = 'http://'
                           onChange = {handleTextChange}
-                          /> */}
+                          />
                     </div> 
                     <br/> 
                     <div className='donutEditBtns'>
-                        
+                            {/* <button id='editFtBt2'  type = 'submit' >Submit Donut</button> */}
                     <Link to = {`/donuts/${id}`}>
-
                             <button id='editFtBt1' type = 'submit'>Back</button>
-                        </Link>
-                        <button id='editFtBt2'  type = 'submit' >Submit Donut</button>
+                    </Link>
+                            <button id='editFtBt2'  type = 'submit' >Submit Donut</button>
                     
 
                     </div>            

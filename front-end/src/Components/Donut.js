@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 
+
 function Donut({ donut }) {
     return(
-        // <div>
+        
             <tr className='compDonut'>
                 <td>
                     <Link id='hr' to={`/donuts/${donut.id}`}>{donut.name}</Link>
@@ -10,17 +11,17 @@ function Donut({ donut }) {
                 {/* <td id='dName'>{donut.name}</td> */}
                 <td id='dDeds'>{donut.description}</td><br />
                 {/* <td id='dJolt'>{donut.jolt}</td> */}
-                <br /><td id='dPric'> ${donut.price}.00</td><br />
-                {/* <br /><td id='dRate'>{donut.rating}</td><br />
-                <br /><td id='dFeat'>{donut.feature}</td> */}
+                <br /><td id='dPric'>{donut.price}</td><br />
+                {/* <br /><td id='dRate'>{donut.rating}</td><br /> */}
+                {/* <br /><td id='dFeat'>{donut.feature}</td> */}
                 {/* <td id='dQuant'>{donut.quantity}</td> */}
                 {/* <td id='dResp'>{donut.responsibility}</td> */}
                  <br /> <Link to={`/donuts/${donut.id}`}>
-                      <img id='mainPics' style={{'height':'300px'}} src={ donut.image } />
-                  </Link>
+                          <img id='mainPics' style={{'height':'300px'}} src={ donut.image } />
+                        </Link>
                 {/* <td id='dResp'>{donut.responsibility}</td> */}
             </tr>         
-        // </div>
+        
     )
 }
 
